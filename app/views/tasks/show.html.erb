@@ -1,0 +1,13 @@
+<div class="card m-2" style="width: 18rem;">
+    <div class="card-body m-2">
+      <h3 class="card-title "><%= @task.title %></h3>
+      <p class="card-text "><%= @task.details %></p>
+        <% if @task.completed %>
+        <p>You completed this task</p>
+        <% else %>
+        <p>Not completed</p>
+        <% end %>
+      <button type="button" class=" mt-2 btn btn-outline-primary"><%= link_to "Back to list", tasks_path %></button>
+    </div>
+  </div>
+  <button type="button" class="ml-2 btn"><%= link_to "Edit this task", edit_path %></button>
